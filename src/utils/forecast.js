@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to fetch weather for location. Check query parameters again!', undefined)
         } else {
             
-            callback(undefined, body.current.weather_descriptions[0] + " : It is currently " + body.current.temperature + " degrees fahrenheit outside. It feels like " + body.current.feelslike + " degrees fahrenheit out.")
+            callback(undefined, body.current.weather_descriptions[0] + " : It is currently " + body.current.temperature + " degrees fahrenheit outside. It feels like " + body.current.feelslike + " degrees fahrenheit.\nObservation Time -> " + body.current.observation_time + "\n. Humidity is " + body.current.humidity + " percent.\nVisibility -> " + body.current.visibility)
         }
     })
 }

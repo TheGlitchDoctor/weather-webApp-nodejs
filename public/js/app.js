@@ -17,6 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const address = search.value
+    messageOne.style.color = "white"
     messageOne.textContent = 'Loading ...'
 
     fetch('/weather?address=' + address).then((response) => {
